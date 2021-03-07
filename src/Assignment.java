@@ -72,7 +72,8 @@ private  void resizeTable(){
              ptr=ptr.next;
          }
          if(ptr==null){
-             prev.next=ptr;
+             prev.next=newnode;
+             ptr=newnode;
              prev=ptr;
              ptr.next=null;
          }
@@ -186,7 +187,7 @@ contains-> return whether value with key is accesible or not
 public class Assignment {
      public static void main(String[] args){
          HTable<String,Integer> obj=new HTable<>();
-         obj.insert("abs",12);
+         obj.insert("abs",122);
          obj.insert("abcd",121);
          obj.insert("abc",1211);
          obj.insert("xyz",1);
